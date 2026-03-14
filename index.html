@@ -1,102 +1,108 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Play Developer Portfolio</title>
+    <title>Google Play Developer | Portfolio</title>
     <style>
         :root {
-            --primary-color: #01875f; /* Màu xanh đặc trưng Google Play */
+            --primary-color: #01875f; /* Google Play Green */
             --dark-color: #202124;
             --light-bg: #f8f9fa;
         }
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; color: var(--dark-color); background: var(--light-bg); }
+        body { font-family: 'Roboto', sans-serif; margin: 0; line-height: 1.6; color: var(--dark-color); background: var(--light-bg); }
         
         /* Navigation */
-        nav { background: white; padding: 1rem 10%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 1000; }
-        nav a { text-decoration: none; color: var(--dark-color); margin-left: 20px; font-weight: 500; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); }
+        nav { background: white; padding: 1rem 10%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); z-index: 1000; }
+        nav a { text-decoration: none; color: var(--dark-color); margin-left: 25px; font-weight: 500; font-size: 0.95rem; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary-color); }
 
         /* Hero Section */
-        header { padding: 4rem 10%; background: white; text-align: center; border-bottom: 1px solid #eee; }
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        header p { color: #5f6368; max-width: 600px; margin: 0 auto; }
+        header { padding: 5rem 10%; background: white; text-align: center; border-bottom: 1px solid #eee; }
+        header h1 { font-size: 2.8rem; margin-bottom: 15px; letter-spacing: -0.5px; }
+        header p { color: #5f6368; max-width: 650px; margin: 0 auto; font-size: 1.1rem; }
 
         /* Products Section */
         .container { padding: 4rem 10%; }
-        .section-title { text-align: center; margin-bottom: 3rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .section-title { text-align: center; margin-bottom: 3.5rem; font-size: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
         
-        .app-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
-        .app-card:hover { transform: translateY(-5px); }
-        .app-info { padding: 1.5rem; }
-        .app-tag { color: var(--primary-color); font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
-        .app-card h3 { margin: 10px 0; }
-        .btn-store { display: inline-block; background: var(--primary-color); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-top: 15px; }
+        .app-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .app-card:hover { transform: translateY(-8px); }
+        .app-info { padding: 2rem; }
+        .app-tag { color: var(--primary-color); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .app-card h3 { margin: 12px 0; font-size: 1.4rem; }
+        .app-card p { color: #5f6368; font-size: 0.95rem; margin-bottom: 20px; }
+        .btn-store { display: inline-block; background: var(--primary-color); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: opacity 0.2s; }
+        .btn-store:hover { opacity: 0.9; }
 
         /* Contact Section */
-        .contact { background: #e8f0fe; padding: 4rem 10%; text-align: center; }
-        .contact-form { max-width: 500px; margin: 20px auto; display: flex; flex-direction: column; gap: 10px; }
-        input, textarea { padding: 12px; border: 1px solid #ccc; border-radius: 5px; }
-        button { background: var(--dark-color); color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; }
+        .contact { background: #f1f3f4; padding: 5rem 10%; text-align: center; }
+        .contact-form { max-width: 550px; margin: 30px auto; display: flex; flex-direction: column; gap: 12px; }
+        input, textarea { padding: 14px; border: 1px solid #dadce0; border-radius: 8px; font-size: 1rem; outline-color: var(--primary-color); }
+        button { background: var(--dark-color); color: white; padding: 14px; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: background 0.3s; }
+        button:hover { background: #000; }
 
-        footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #5f6368; }
+        footer { text-align: center; padding: 3rem; font-size: 0.9rem; color: #70757a; background: white; border-top: 1px solid #eee; }
+        footer a { color: inherit; text-decoration: underline; margin-left: 15px; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">DevStore</div>
+        <div class="logo">AppDev Studio</div>
         <div>
-            <a href="#about">Giới thiệu</a>
-            <a href="#apps">Sản phẩm</a>
-            <a href="#contact">Liên hệ</a>
+            <a href="#about">About</a>
+            <a href="#apps">Products</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header id="about">
-        <h1>Nhà phát triển Google Play</h1>
-        <p>Chào mừng bạn đến với không gian sáng tạo của tôi. Tôi chuyên xây dựng các ứng dụng Android hữu ích, mượt mà và tập trung vào trải nghiệm người dùng.</p>
+        <h1>Google Play Developer</h1>
+        <p>I build high-quality Android applications focused on performance, elegant design, and user satisfaction. Explore my latest projects below.</p>
     </header>
 
     <div class="container" id="apps">
-        <h2 class="section-title">Ứng dụng nổi bật</h2>
+        <h2 class="section-title">Featured Applications</h2>
         <div class="grid">
             <div class="app-card">
-                <div style="height: 180px; background: #ddd;"></div> <div class="app-info">
-                    <span class="app-tag">Công cụ</span>
-                    <h3>Ứng dụng Quản lý Chi tiêu</h3>
-                    <p>Giúp bạn theo dõi tài chính cá nhân một cách thông minh và đơn giản hàng ngày.</p>
-                    <a href="#" class="btn-store">Xem trên Play Store</a>
+                <div style="height: 200px; background: linear-gradient(135deg, #01875f, #00c853);"></div>
+                <div class="app-info">
+                    <span class="app-tag">Tools & Utility</span>
+                    <h3>Smart Finance Tracker</h3>
+                    <p>Take control of your personal finances with real-time tracking and intuitive reports.</p>
+                    <a href="#" class="btn-store">Get it on Google Play</a>
                 </div>
             </div>
 
             <div class="app-card">
-                <div style="height: 180px; background: #ccc;"></div>
+                <div style="height: 200px; background: linear-gradient(135deg, #1a73e8, #8ab4f8);"></div>
                 <div class="app-info">
-                    <span class="app-tag">Năng suất</span>
-                    <h3>Ghi chú Siêu tốc</h3>
-                    <p>Lưu lại mọi ý tưởng ngay lập tức với tính năng đồng bộ hóa đám mây mạnh mẽ.</p>
-                    <a href="#" class="btn-store">Xem trên Play Store</a>
+                    <span class="app-tag">Productivity</span>
+                    <h3>Cloud Notes Pro</h3>
+                    <p>The fastest way to capture your thoughts and sync them across all your Android devices.</p>
+                    <a href="#" class="btn-store">Get it on Google Play</a>
                 </div>
             </div>
         </div>
     </div>
 
     <section class="contact" id="contact">
-        <h2>Kết nối với tôi</h2>
-        <p>Bạn có ý tưởng dự án hoặc cần hỗ trợ về ứng dụng? Đừng ngần ngại gửi tin nhắn.</p>
+        <h2>Get in Touch</h2>
+        <p>Have a question or looking for support? Feel free to reach out.</p>
         <div class="contact-form">
-            <input type="text" placeholder="Tên của bạn">
-            <input type="email" placeholder="Email liên hệ">
-            <textarea rows="5" placeholder="Nội dung tin nhắn"></textarea>
-            <button>Gửi yêu cầu</button>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email Address">
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button>Send Message</button>
         </div>
     </section>
 
     <footer>
-        &copy; 2026 Developer Name. Tất cả quyền được bảo lưu.
+        &copy; 2026 Your Developer Name. All rights reserved.
+        <a href="policy.html">Privacy Policy</a>
     </footer>
 
 </body>
